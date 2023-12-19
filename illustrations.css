@@ -1,0 +1,122 @@
+/* Your existing CSS styles can continue here */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#illustrator-tab {
+  color: #00d9ff;
+}
+
+.header {
+    background-color: #000000; /* Dark header background color */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+.navbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin-right: 20px;
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff; /* Link text color */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list li a:hover {
+    color: #00d9ff; /* Link text color on hover */
+  }
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .illustration-gallery {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .illustration-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .illustration {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .illustration img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .illustration p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777777;
+  }
+  
+  .illustration:hover img {
+    transform: scale(1.05);
+  }
+
+
+
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Darkened background */
+    z-index: 9999;
+    overflow: auto; /* Allow scrolling within the overlay */
+    text-align: center;
+    align-content: center;
+  }
+  
+  #fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Optional: Box shadow for image */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 99999;
+  }
+  
+  
+  

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illustration Showcase</title>
+  <link rel="stylesheet" href="illustrations.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="illustrations.html">Illustrator</a></li>
+            <li><a href="#photoshop" id="illustrator-tab">Photoshop</a></li>
+            <li><a href="#premier">Premier</a></li>
+            <li><a href="#coding">Coding</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="illustration-gallery">
+      <h1>Illustration Showcase</h1>
+      <div class="illustration-container">
+        <!-- Replace the placeholders below with your actual illustrations -->
+        <div class="illustration">
+          <img src="assets/galexCool.png" alt="Illustration 1" onclick="openFullscreen(this)">
+          <h5>Galex</h5>
+          <p>This guys cool</p>
+        </div>
+        <div class="illustration">
+          <img src="assets/uglyDawg.png" alt="Illustration 2" onclick="openFullscreen(this)">
+          <h5>Ugly Dawg</h5>
+          <p>Placeholder</p>
+        </div>
+        <div class="illustration">
+            
+            <img src="assets/delvinForest.png" alt="Illustration 3" onclick="openFullscreen(this)">
+            <h5>Delvin</h5>
+            <p>Placeholder</p>
+          </div>
+          <div class="illustration">
+            <img src="assets/sunflower.png" alt="Illustration 4" onclick="openFullscreen(this)">
+            <h5>Sunflower</h5>
+            <p>Placeholder</p>
+          </div>
+          <div class="illustration">
+            <img src="assets/engineerArt.png" alt="Illustration 4" onclick="openFullscreen(this)">
+            <h5>Circuit</h5>
+            <p>Placeholder</p>
+          </div>
+          
+        </div>
+        <!-- Add more illustrations as needed -->
+      </div>
+    </section>
+  </main>
+</body>
+
+  <!-- Footer section -->
+  <footer class="footer">
+
+    <div id="fullscreen" class="fullscreen-overlay">
+        <span class="close-btn" onclick="closeFullscreen()">×</span>
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+    </div>
+    
+    <script>
+    function openFullscreen(elem) {
+      var fullscreenDiv = document.getElementById('fullscreen');
+      var fullscreenImg = document.getElementById('fullscreen-image');
+
+      fullscreenDiv.style.display = 'block';
+      fullscreenImg.src = elem.src;
+      document.main.style.overflow = 'hidden'; // Hide the scrollbar
+      document.main.style.filter = 'blur(5px) brightness(50%)'; // Blur and darken the background
+    }
+    
+    function closeFullscreen() {
+      var fullscreenDiv = document.getElementById('fullscreen');
+      fullscreenDiv.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrollbar
+      document.body.style.filter = 'none'; // Remove background blur and darkness
+    }
+  </script>
+
+  </footer>
+</html>
