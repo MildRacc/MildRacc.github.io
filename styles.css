@@ -4,6 +4,12 @@ body {
   font-family: Arial, sans-serif;
   background-color: #1A1A1A; /* Dark background color */
   color: #D9D9D9; /* Text color */
+
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 
@@ -15,6 +21,7 @@ body {
   height: auto;
   transform: translateY(-600px);
 }
+
 #about-tab {
   color: #2D92B3;
 }
@@ -32,9 +39,10 @@ body {
 }
 
 #head-name {
+  flex: content;
   height: 64px;
   margin-top: 10px;
-  margin-right: 10%;
+  margin-left: 0;
 }
 
 #head-name a {
@@ -101,10 +109,13 @@ body {
 }
 
 .about-section h1 {
+  position: relative;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 248px;
   margin-top: 30vh;
   margin-bottom: 40vh;
+
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
 }
 
 #about-description {
@@ -140,24 +151,36 @@ body {
 
 #Typescript {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
 
-  transform: translate(140px, 83.5px) rotate(10deg);
+  transform: translate(120px, 53.5px) rotate(3deg);
 }
 
 #Python {
   position: absolute;
   width: 250px;
   height: 250px;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
 
   transform: translate(-45px, 150px) rotate(-10deg);
+}
+
+#Adobe-Illustrator {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5));
+
+  transform: translate(50px, 370.5px) rotate(9deg);
 }
 
 #Photoshop {
   position: absolute;
   width: 140px;
   height: 140px;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
 
   transform: translate(100px, 370.5px) rotate(-8deg);
 }
@@ -166,6 +189,7 @@ body {
   position: absolute;
   width: 170px;
   height: 170px;
+  filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5));
 
   transform: translate(30px, 590.5px) rotate(12deg);
 }
@@ -174,6 +198,7 @@ body {
   position: absolute;
   width: 120px;
   height: 120px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 
   transform: translate(120px, 820px) rotate(-3deg);
 }
@@ -193,17 +218,6 @@ body {
 }
 
 .skills ul li {
-  list-style-type: none;
-  margin-bottom: 8px;
-}
-
-/* Achievements section styles */
-.achievements ul {
-  padding: 0;
-  text-align: left;
-}
-
-.achievements ul li {
   list-style-type: none;
   margin-bottom: 8px;
 }
