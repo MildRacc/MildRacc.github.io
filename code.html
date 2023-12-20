@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>coding</title>
+  <link rel="stylesheet" href="code.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div id="head-name">
+        <a >Sasha Dehli</a>
+        <p>Digital Arts Student</p>
+      </div>
+        <ul class="nav-list">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="illustrations.html">Illustrator</a></li>
+            <li><a href="photoshop.html">Photoshop</a></li>
+            <li><a href="premier.html">Premier</a></li>
+            <li><a href="#coding" id="coding-tab">Coding</a></li>
+        </ul>
+        <a class="contact-button" href="https://forms.gle/L9h8hwZv1AFDMbXv6"><button type="button">Contact</button></a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="coding-gallery">
+      <h1>Code Showcase</h1>
+      <div class="coding-container">
+        <!-- Replace the placeholders below with your actual codings -->
+        <h3>Projects will be here when ready</h3>
+    </section>
+  </main>
+</body>
+
+  <!-- Footer section -->
+  <footer class="footer">
+
+    <div id="fullscreen" class="fullscreen-overlay">
+        <span class="close-btn" onclick="closeFullscreen()">×</span>
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+    </div>
+    
+    <script>
+    function openFullscreen(elem) {
+      var fullscreenDiv = document.getElementById('fullscreen');
+      var fullscreenImg = document.getElementById('fullscreen-image');
+
+      fullscreenDiv.style.display = 'block';
+      fullscreenImg.src = elem.src;
+      document.main.style.overflow = 'hidden'; // Hide the scrollbar
+      document.main.style.filter = 'blur(5px) brightness(50%)'; // Blur and darken the background
+    }
+    
+    function closeFullscreen() {
+      var fullscreenDiv = document.getElementById('fullscreen');
+      fullscreenDiv.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrollbar
+      document.body.style.filter = 'none'; // Remove background blur and darkness
+    }
+  </script>
+
+  </footer>
+</html>
