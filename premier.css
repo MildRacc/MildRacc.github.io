@@ -136,6 +136,7 @@ body::-webkit-scrollbar {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
   }
   
   .premier img {
@@ -148,6 +149,10 @@ body::-webkit-scrollbar {
     margin: 10px 0;
     font-size: 14px;
     color: #777777;
+  }
+
+  .premier:hover {
+    transform: scale(1.075);
   }
   
   .premier:hover img {
