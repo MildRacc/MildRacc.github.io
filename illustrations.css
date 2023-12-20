@@ -133,9 +133,12 @@ body::-webkit-scrollbar {
   }
   
   .illustration {
+    position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1px;
+    transition: transform 0.3s ease-in-out;
   }
   
   .illustration img {
@@ -149,9 +152,13 @@ body::-webkit-scrollbar {
     font-size: 14px;
     color: #777777;
   }
+
+  .illustration:hover {
+    transform: scale(1.075);
+  }
   
   .illustration:hover img {
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 
 
