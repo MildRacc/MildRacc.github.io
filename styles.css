@@ -156,7 +156,7 @@ body::-webkit-scrollbar {
 /* Profile picture styles */
 .profile-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   margin-bottom: 20px;
 }
 
