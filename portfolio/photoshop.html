@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photoshop</title>
+  <link rel="stylesheet" href="photoshop.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div id="head-name">
+        <a >Sasha Dehli</a>
+        <p>Digital Arts Student</p>
+      </div>
+        <ul class="nav-list">
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="illustrations.html">Illustrator</a></li>
+            <li><a href="#photoshop" id="photoshop-tab">Photoshop</a></li>
+            <li><a href="premier.html">Premier</a></li>
+            <li><a href="code.html">Coding</a></li>
+        </ul>
+        <a class="contact-button" href="https://forms.gle/L9h8hwZv1AFDMbXv6" target="_blank" rel="noopener"><button type="button">Contact</button></a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="photoshopped-gallery">
+      <h1>Photoshop Showcase</h1>
+      <div class="photoshopped-container">
+        <!-- Replace the placeholders below with your actual photoshoppeds -->
+        <div class="photoshopped">
+          <img src="assets/galexCool.png" alt="photoshopped 1" onclick="openFullscreen(this)">
+          <h5>Galex</h5>
+          <p>I got a pcitre of my friend and then put this glowing triangle around his head while following a tutorial. Its not too bad in my opinion.</p>
+        </div>
+        <div class="photoshopped">
+          <img src="assets/uglyDawg.png" alt="photoshopped 2" onclick="openFullscreen(this)">
+          <h5>Ugly Dawg</h5>
+          <p>I think this picture is really funny so I decided to make an edit of it. I followed a tutorial for this picture too, and it's by far my favorite Photoshop project.</p>
+        </div>
+        <div class="photoshopped">
+            
+            <img src="assets/delvinForest.png" alt="photoshopped 3" onclick="openFullscreen(this)">
+            <h5>Delvin</h5>
+            <p>I found a cool tutorial of how to do this effect, so I took a picture of my friend and turned him into a forest.</p>
+          </div>
+          <div class="photoshopped">
+            <img src="assets/sunflower.png" alt="photoshopped 4" onclick="openFullscreen(this)">
+            <h5>Sunflower</h5>
+            <p>I had no idea where I was going with this one. I was just making brushes and doing a bunch of overlaying and underlaying with colors.</p>
+          </div>
+          <div class="photoshopped">
+            <img src="assets/engineerArt.png" alt="photoshopped 4" onclick="openFullscreen(this)">
+            <h5>Circuit</h5>
+            <p>I think this image turned out pretty well. I think the notebook was a good choice for a centerpiece and the circuit boards and other modules look pretty cool. Biggest issue was getting scans of some of the modules.</p>
+          </div>
+          
+        </div>
+        <!-- Add more photoshoppeds as needed -->
+      </div>
+    </section>
+  </main>
+</body>
+
+  <!-- Footer section -->
+  <footer class="footer">
+
+    <div id="fullscreen" class="fullscreen-overlay">
+        <span class="close-btn" onclick="closeFullscreen()">×</span>
+        <img id="fullscreen-image" src="" alt="Fullscreen Image">
+    </div>
+    
+    <script>
+    function openFullscreen(elem) {
+      var fullscreenDiv = document.getElementById('fullscreen');
+      var fullscreenImg = document.getElementById('fullscreen-image');
+
+      fullscreenDiv.style.display = 'block';
+      fullscreenImg.src = elem.src;
+      document.main.style.overflow = 'hidden'; // Hide the scrollbar
+      document.main.style.filter = 'blur(5px) brightness(50%)'; // Blur and darken the background
+    }
+    
+    function closeFullscreen() {
+      var fullscreenDiv = document.getElementById('fullscreen');
+      fullscreenDiv.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Restore scrollbar
+      document.body.style.filter = 'none'; // Remove background blur and darkness
+    }
+  </script>
+
+  </footer>
+</html>
