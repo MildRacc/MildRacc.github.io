@@ -39,6 +39,7 @@
         <div id="about-description">
           <div class="about-icons">
             <a href="#code"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="Typescript Logo" id="Typescript"></a>
+            <a href="#code"><img src="https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/b/be2f75f72751c11cbe1593c69a99a52900bf12cb.svg" alt="ThreeJS Logo" id="ThreeJS"></a>
             <a href="#code"><img src="https://www.svgrepo.com/show/376344/python.svg" alt="Python Logo" id="Python"></a>
             <a href="illustrations.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1051px-Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator Logo" id="Adobe-Illustrator"></a>
             <a href="photoshop.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1024px-Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop Logo" id="Photoshop"></a>
@@ -99,6 +100,7 @@
       let background = document.getElementById('background-art');
       let header = document.getElementById('aboutme-head');
       let TS = document.getElementById('Typescript')
+      let TJS = document.getElementById("ThreeJS")
       let PY = document.getElementById('Python')
       let IL = document.getElementById('Adobe-Illustrator')
       let PS = document.getElementById('Photoshop')
@@ -108,16 +110,17 @@
       window.addEventListener('scroll', function(){
         let scroll = window.scrollY;
         if(scroll < 1000){
-          background.style.top = (scroll * 0.3) + "px";
+          background.style.top = (scroll * 0.3 / (innerWidth / 1000)) + "px";
         }
 
         header.style.top = (scroll * -0.45) + "px";
-        TS.style.top = 1000 + (scroll * -0.1) + "px";
-        PY.style.top = 1000 + (scroll * -0.15) + "px";
-        IL.style.top = 1050 + (scroll * -0.2) + "px";
-        PS.style.top = 1250 + (scroll * -0.2) + "px";
-        PR.style.top = 1350 + (scroll * -0.35) + "px";
-        AE.style.top = 1100 + (scroll * -0.15) + "px";
+        TS.style.top = 1000 + (scroll * -0.25 / (innerWidth / 1000)) + "px";
+        TJS.style.top = 1000 + (scroll * -0.3 / (innerWidth / 1000)) + "px"
+        PY.style.top = 1000 + (scroll * -0.35 / (innerWidth / 1000)) + "px";
+        IL.style.top = 1050 + (scroll * -0.2 / (innerWidth / 1000)) + "px";
+        PS.style.top = 1250 + (scroll * -0.25 / (innerWidth / 1000)) + "px";
+        PR.style.top = 1350 + (scroll * -0.35 / (innerWidth / 1000)) + "px";
+        AE.style.top = 1100 + (scroll * -0.45 / (innerWidth / 1000)) + "px";
       })
     </script>
   </footer>

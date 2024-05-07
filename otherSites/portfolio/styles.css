@@ -170,7 +170,7 @@ body::-webkit-scrollbar {
   justify-self: center;
   width: 100%;
 
-  font-size: 2vh;
+  font-size: 1.25vw;
   text-align: center;
 }
 
@@ -180,16 +180,25 @@ body::-webkit-scrollbar {
   height: 120px;
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
 
-  transform: translate(120px, 53.5px) rotate(3deg);
+  transform: translate(120px, calc(100vh - 650px - 7vw)) rotate(3deg);
 }
 
-#Python {
+#ThreeJS {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 130px;
+  height: 130px;
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
 
-  transform: translate(-45px, 150px) rotate(-10deg);
+  transform: translate(90px, calc(100vh - 375px - 5vw)) rotate(0);
+}
+
+#Python { 
+  position: absolute;
+  width: 225px;
+  height: 225px;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.75));
+
+  transform: translate(-45px, calc(100vh - 150px - 3vw)) rotate(-10deg);
 }
 
 #Adobe-Illustrator {
@@ -198,7 +207,7 @@ body::-webkit-scrollbar {
   height: 160px;
   filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5));
 
-  transform: translate(50px, 370.5px) rotate(9deg);
+  transform: translate(50px, calc(100vh - 200.5px + 5vw)) rotate(9deg);
 }
 
 #Photoshop {
@@ -207,7 +216,7 @@ body::-webkit-scrollbar {
   height: 140px;
   filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
 
-  transform: translate(100px, 370.5px) rotate(-8deg);
+  transform: translate(100px, calc(100vh - 50.5px + 7vw)) rotate(-8deg);
 }
 
 #Premier {
@@ -216,7 +225,7 @@ body::-webkit-scrollbar {
   height: 170px;
   filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.5));
 
-  transform: translate(30px, 590.5px) rotate(12deg);
+  transform: translate(30px, calc(100vh + 230.5px + 10vw)) rotate(12deg);
 }
 
 #After-Effects {
@@ -225,7 +234,7 @@ body::-webkit-scrollbar {
   height: 120px;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 
-  transform: translate(120px, 820px) rotate(-3deg);
+  transform: translate(120px, calc(100vh + 950px + 10vw)) rotate(-3deg);
 }
 
 .bio p {
@@ -252,7 +261,7 @@ body::-webkit-scrollbar {
   justify-self: center;
   width: 100%;
 
-  font-size: 21px;
+  font-size: 1.25vw;
   text-align: center;
 }
 
