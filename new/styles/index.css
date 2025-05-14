@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Limelight';
+    src: url('../fonts/Limelight-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../fonts/GT-Walsheim-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('../fonts/SpaceGrotesk.ttf') format('truetype');
+}
+
+body {
+    background-color: #f0f0f0;
+
+}
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+
+}
+
+.main h1 {
+    font-family: 'Limelight', sans-serif;
+    font-size: 3rem;
+    color: #333;
+
+    align-self: left;
+}
+
+.main p {
+    font-family: 'GTWalsheim', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+
+    width: 15%;
+    text-align: center;
+}
+
+
+.links {
+    font-family: 'SpaceGrotesk', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.links a:visited {
+    color: black;
+}
+
+
+.ital {
+    font-style: italic;
+}
+
+.links a {
+    position: relative;
+    text-decoration: none;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.links a:hover::after {
+    transform: scaleX(1);
+}
