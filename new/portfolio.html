@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reuse.css">
+    <link rel="stylesheet" href="./styles/portfolio.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "/node_modules/three/build/three.module.js",
+            "three/": "/node_modules/three/"
+        }
+    }
+    </script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li class="head-name">Sasha Dehli</li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="code.html">Code</a></li>
+            <li><a href="engineering.html">Engineering</a></li>
+            <li><a href="./assets/documents/Alexander (Sasha) Dehlendorf Resume.pdf">Resume</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+
+        <div class="content-container">
+            <h2>Media</h2>
+            <div class="media content-area">
+                <button><img style="width: 400px;" src="./assets/media_image/Low Poly project.png" alt="Low Poly Goose"></button>
+                <button><img style="width: 300px;" src="./assets/media_image/engineerArt.png" alt="Engineer"></button>
+                <button><img style="width: 250px;" src="./assets/media_image/Dissection Proj Final.png" alt=""></button>
+                <button><img style="width: 300px" src="./assets/media_image/ConveyEmotionFinal.png" alt="Idk"></button>
+                <button><img style="width: 350px;" src="./assets/media_image/PushingLimitsFinal.png" alt=""></button>
+                
+            </div>
+        </div>
+        <div class="content-container">
+            <h2>Code</h2>
+            <div class="code content-area">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="content-container">
+            <h2>Engineering</h2>
+            <div class="engineering content-area">
+                <canvas id="roboGlove"></canvas>
+                <canvas id=""></canvas>
+                <canvas id=""></canvas>
+            </div>
+        </div>
+
+    </div>
+</body>
+<footer>
+    <script type="module" src="./src/engDisplay.js"></script>
+    <script src="./src/mediabutton.js"></script>
+</footer>
+
+</html>
