@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Image descriptions - you can customize these
     const descriptions = {
-        "Low Poly Goose": "A low-poly illustration of a goose.",
-        "Engineer": "Stylized collage contaning different object which I personaly use.",
+        "Low Poly Goose": "A low-poly illustration of a goose created in Adobe Illustrator",
+        "Engineer": "Stylized collage contaning different object which I personaly use. Items were scanned into Photoshop where they were arranged.",
         "Dissection Proj Final": "An illustration of a made up design for a VR headset. The artwork is inspired by technical patent-papers and how they illustrate designs.",
-        "Idk": "Abstract digital artwork exploring emotional expression through color and form.",
-        "": "A visual experiment pushing the boundaries of digital media, focusing on texture and contrast."
+        "Convery Emotion": "Abstract digital artwork exploring emotional expression through color and form. Models were imported to Blender and arranged before being moved to Photoshop for post-processing",
+        "Storytelling": "The story of two spartans. A collage made from photos of resin printed spartan figurines, pictures of Roman ruins, and other elements."
     };
     
     // Add click event listeners to each button

@@ -31,7 +31,7 @@
     <div class="content">
 
         <div class="content-container">
-            <h2>Media</h2>
+            <h2>My Favorite Artworks</h2>
             <div class="media content-area">
                 <button><img style="height: 350px;" src="./assets/media_image/Low Poly project.png" alt="Low Poly Goose"></button>
                 <button><img style="height: 350px;" src="./assets/media_image/engineerArt.png" alt="Engineer"></button>
@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="content-container">
-            <h2>Code</h2>
+            <h2>Coding Projects</h2>
             <div class="code content-area">
                 <button><img style="height: 300px;" src="./assets/media_image/ThisWebsite.png" alt="This Website"></button>
                 <a href="https://useless-windows.vercel.app/"><button><img style="height: 300px;" src="./assets/media_image/UselessWindows.png" alt="Useless Windows"></button></a>
@@ -50,11 +50,12 @@
             </div>
         </div>
         <div class="content-container">
-            <h2>Engineering</h2>
+            <h2>Engineering Projects</h2>
             <div class="engineering content-area">
-                <canvas id="roboGlove"></canvas>
+                <!-- <canvas id="roboGlove"></canvas>
                 <canvas id=""></canvas>
-                <canvas id=""></canvas>
+                <canvas id=""></canvas> -->
+                <h3>Available Soon...</h3>
             </div>
         </div>
 
@@ -63,6 +64,21 @@
 <footer>
     <script type="module" src="./src/engDisplay.js"></script>
     <script src="./src/mediabutton.js"></script>
+    <script>
+
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            if (link.getAttribute('href').includes('Resume')) return;
+            link.addEventListener('click', event => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').split('.')[0];
+            const targetElement = document.querySelector(`.${targetId}`);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+            });
+        });
+
+    </script>
 </footer>
 
 </html>
