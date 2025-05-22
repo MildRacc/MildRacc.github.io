@@ -77,7 +77,7 @@ nav {
 }
 
 .media {
-    width: 1000px;
+    width: 1200px;
 }
 
 .content-area button {
@@ -93,7 +93,7 @@ nav {
 .media img {
     border-radius: 8px;
     padding: 4px;
-    height: fit-content;
+    height: 350px;
 }
 
 .engineering canvas {
