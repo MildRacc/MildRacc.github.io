@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mechanical glove
+* source:	https://sketchfab.com/3d-models/mechanical-glove-856f7a7ab60244daa5eddf65062f4f07
+* author:	ananasik (https://sketchfab.com/andrew_ss2)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mechanical glove" (https://sketchfab.com/3d-models/mechanical-glove-856f7a7ab60244daa5eddf65062f4f07) by ananasik (https://sketchfab.com/andrew_ss2) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
