@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const youtubeiFrames = {
-        "Self Portrait": `<iframe width="560" height="315" src="https://www.youtube.com/embed/j6rA_zFO5ZI?si=LNxQQVqen24EXIk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+        "Self Portrait": `<iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         "Experimental": `<iframe width="560" height="315" src="https://www.youtube.com/embed/2sgk2SVO2kA?si=trEfxTq82QPyFw-m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
         "Space Cowboy": `<iframe width="560" height="315" src="https://www.youtube.com/embed/tqNYm1sU_jw?si=DzO6xfb-p8BhItAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
     
