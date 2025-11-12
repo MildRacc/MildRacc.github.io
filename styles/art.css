@@ -9,7 +9,7 @@ body {
     text-align: right;
     padding: 100px 80px 70px 40px;
     margin-bottom: 60px;
-    background: #e8e8e8
+    background: linear-gradient(to right, transparent 0%, transparent 50%, #e8e8e8 50%, #e8e8e8 100%);
 }
 
 .page-header h1 {
@@ -69,39 +69,39 @@ body {
 
 .art-piece:nth-child(2) {
     /* Engineer: 3900x5700 - max dimension 5700 */
-    top: 175px;
-    right: 175px;
+    top: 50px;
+    right: 100px;
     width: 380px;
     /* 5700 / 15 */
 }
 
 .art-piece:nth-child(3) {
     /* Experimental */
-    top: 650px;
-    left: 350px;
+    top: 750px;
+    left: 50px;
     width: 400px;
     /* adjust based on actual dimensions */
 }
 
 .art-piece:nth-child(4) {
     /* Dissection */
-    top: 820px;
-    right: 280px;
+    top: 620px;
+    right: 80px;
     width: 400px;
     /* adjust based on actual dimensions */
 }
 
 .art-piece:nth-child(5) {
     /* Convey Emotion */
-    top: 1050px;
-    left: 150px;
+    top: 1250px;
+    left: 250px;
     width: 450px;
     /* adjust based on actual dimensions */
 }
 
 .art-piece:nth-child(6) {
     /* Space Cowboy */
-    top: 1550px;
+    top: 1300px;
     right: 150px;
     width: 400px;
     /* adjust based on actual dimensions */
@@ -109,16 +109,16 @@ body {
 
 .art-piece:nth-child(7) {
     /* Pushing Limits */
-    top: 1550px;
-    left: 225px;
+    top: 1850px;
+    left: 100px;
     width: 450px;
     /* adjust based on actual dimensions */
 }
 
 .art-piece:nth-child(8) {
     /* Storytelling */
-    top: 1850px;
-    right: 330px;
+    top: 1900px;
+    right: 120px;
     width: 400px;
     /* adjust based on actual dimensions */
 }
@@ -171,6 +171,14 @@ body {
     max-width: 100%;
     max-height: 90vh;
     object-fit: contain;
+}
+
+.modal-iframe {
+    width: 80vw;
+    height: 45vw;
+    max-width: 1200px;
+    max-height: 675px;
+    border: none;
 }
 
 .close-modal {
