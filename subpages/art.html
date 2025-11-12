@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reuse.css">
+    <link rel="stylesheet" href="../styles/art.css">
+    <title>Art — brnspc</title>
+</head>
+<body>
+    <a href="../index.html" class="back-button">← Back</a>
+
+    <div class="page-header">
+        <h1>art</h1>
+        <p>Welcome to the gallery</p>
+    </div>
+
+    <div class="gallery-wall">
+        <div class="art-piece">
+            <img src="../assets/content/art/Low Poly project.png" alt="Low Poly Goose">
+        </div>
+        <div class="art-piece">
+            <img src="../assets/content/art/engineerArt.png" alt="Engineer">
+        </div>
+        <div class="art-piece" data-video="true">
+            <img src="../assets/content/art/Experimental-Vid.png" alt="Experimental">
+        </div>
+        <div class="art-piece">
+            <img src="../assets/content/art/Dissection Proj Final.png" alt="Dissection">
+        </div>
+        <div class="art-piece">
+            <img src="../assets/content/art/ConveyEmotionFinal.png" alt="Convey Emotion">
+        </div>
+        <div class="art-piece" data-video="true">
+            <img src="../assets/content/art/SpaceCowboy-Vid.png" alt="Space Cowboy">
+        </div>
+        <div class="art-piece">
+            <img src="../assets/content/art/PushingLimitsFinal.png" alt="Pushing The Limits">
+        </div>
+        <div class="art-piece">
+            <img src="../assets/content/art/StoryTellingCollage.png" alt="Storytelling">
+        </div>
+    </div>
+
+    <!-- Modal for full-size view -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modalImage" style="display:none;">
+            <video class="modal-content" id="modalVideo" controls style="display:none;">
+                <source id="modalVideoSource" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalVideo = document.getElementById('modalVideo');
+        const modalVideoSource = document.getElementById('modalVideoSource');
+        const closeModal = document.getElementById('closeModal');
+        const artPieces = document.querySelectorAll('.art-piece');
+
+        // Map thumbnails to video files
+        const videoMap = {
+            'Experimental-Vid.png': '../assets/content/art/Experimental.mp4',
+            'SpaceCowboy-Vid.png': '../assets/content/art/SpaceCowboy.mp4'
+        };
+
+        artPieces.forEach(piece => {
+            piece.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const imgSrc = img.src;
+                const fileName = imgSrc.split('/').pop();
+                
+                modal.classList.add('active');
+                
+                // Check if this is a video thumbnail
+                if (videoMap[fileName]) {
+                    modalImg.style.display = 'none';
+                    modalVideo.style.display = 'block';
+                    modalVideoSource.src = videoMap[fileName];
+                    modalVideo.load();
+                } else {
+                    modalVideo.style.display = 'none';
+                    modalImg.style.display = 'block';
+                    modalImg.src = imgSrc;
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('active');
+            modalVideo.pause();
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                modalVideo.pause();
+            }
+        });
+    </script>
+</body>
+</html>

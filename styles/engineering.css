@@ -1,0 +1,218 @@
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    text-align: center;
+    padding: 100px 20px 60px;
+    border-bottom: 3px solid #333;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-family: 'Limelight', sans-serif;
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    font-family: 'GTWalsheim', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+}
+
+.projects-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+}
+
+.project {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.project-number {
+    font-family: 'Limelight', sans-serif;
+    font-size: 6rem;
+    color: #e8e8e8;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: 0;
+    line-height: 1;
+}
+
+.project-content-wrapper {
+    position: relative;
+    z-index: 1;
+    border-left: 4px solid #333;
+    padding-left: 30px;
+}
+
+.project-header {
+    margin-bottom: 25px;
+}
+
+.project-title {
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.project-meta {
+    font-family: 'SpaceGrotesk', sans-serif;
+    font-size: 0.9rem;
+    color: #999;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.project-meta span {
+    margin-right: 15px;
+}
+
+.project-description {
+    font-family: 'GTWalsheim', sans-serif;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.project-images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.project-images img {
+    max-height: 425px;
+    max-width: 500px;
+    width: fit-content;
+    border: 3px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+    transform: scale(1.02);
+}
+
+.project-files {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.file-item {
+    font-family: 'SpaceGrotesk', sans-serif;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+}
+
+.file-item:hover {
+    background-color: #333;
+}
+
+.file-item:hover .file-label,
+.file-item:hover .file-link {
+    color: #f0f0f0;
+}
+
+.file-label {
+    font-size: 0.75rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.file-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tech-stack {
+    font-family: 'SpaceGrotesk', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tech-tag {
+    background-color: #333;
+    color: #f0f0f0;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    border: 2px solid #333;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background-color: transparent;
+    color: #333;
+}
+
+.divider {
+    width: 60%;
+    height: 2px;
+    background-color: #d0d0d0;
+    margin: 80px auto;
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
+    .project-number {
+        font-size: 4rem;
+        top: -20px;
+        left: -10px;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .projects-container {
+        padding: 0 20px 80px;
+    }
+
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 8px 15px;
+    }
+
+    .project-content-wrapper {
+        padding-left: 20px;
+    }
+}
