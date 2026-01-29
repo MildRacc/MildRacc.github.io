@@ -20,37 +20,35 @@
 
     <div class="projects-container">
         
-        <div class="project">
+       <!-- <div class="project">
             <div class="project-image">
-                <img src="../assets/content/code/ThisWebsite.png" alt="Project Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
+                <img src="../assets/content/code/critters.png" alt="Critters Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
             </div>
             <div class="project-content">
                 <div class="project-header">
-                    <h2 class="project-title">Portfolio Website</h2>
+                    <h2 class="project-title">Critters</h2>
                     <p class="project-description">
-                        A personal portfolio to show off what I do in my free time, covering my coding, engineering, and art projects. This website is entirely custom-built, using HTML, CSS, and JavaScript.
+                        A 2D sandbox simulation with voxel falling-sand simulation (Like <a href="https://noitagame.com/">Noita</a>) where AI creatures fight for survival. Creatures are trained from scratch using genetic algorithms. They evolve movement, combat, and terrain manipulation strategies over generations. Everything is implemented from scratch in Rust except for rendering (WGPU) and windowing (winit).
                     </p>
                 </div>
                 <div class="project-footer">
                     <div class="languages">
-                        <span class="language-tag">HTML</span>
-                        <span class="language-tag">CSS</span>
-                        <span class="language-tag">JavaScript</span>
+                        <span class="language-tag">Rust</span>
                     </div>
-                    <a href="https://github.com/mildracc/mildracc.github.io" class="github-link">View Repo</a>
+                    <a href="https://github.com/MildRacc/critters" class="github-link">View Repo</a>
                 </div>
             </div>
-        </div>
-
+       </div> -->
+        
         <div class="project">
             <div class="project-image">
-                <img src="../assets/content/code/4Cast.png" alt="Project Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
+                <img src="../assets/content/code/4Cast.png" alt="4Cast Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
             </div>
             <div class="project-content">
                 <div class="project-header">
                     <h2 class="project-title">4Cast</h2>
                     <p class="project-description">
-                        An application which alows you to train an LSTM machine learning model on custom data. The goal of this project was to learn how LSTM AI models fundamentally work. I did not use any machine learning libraries, and the LSTM implementation is entirely my own.
+                        An LSTM implementation from scratch in Rust for time-series prediction. Built without any ML libraries in order to understand how Long-Short-Term-Memory models actually work, and implements backpropagation through time. Takes custom CSV datasets and trains models to forecast future values. 
                     </p>
                 </div>
                 <div class="project-footer">
@@ -64,13 +62,13 @@
 
         <div class="project">
             <div class="project-image">
-                <img src="../assets/content/code/ShaderShader.png" alt="Project Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
+                <img src="../assets/content/code/ShaderShader.png" alt="ShaderShader Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
             </div>
             <div class="project-content">
                 <div class="project-header">
                     <h2 class="project-title">ShaderShader</h2>
                     <p class="project-description">
-                        An OpenGL shader viewer that displays your shaders as you edit them.
+                        A live GLSL shader editor built with Rust and OpenGL. Watches shader files for changes and reloads them in real time, letting you instantly see edits without recompiling. Useful for iterating on fragment shaders and visual effects.
                     </p>
                 </div>
                 <div class="project-footer">
@@ -86,13 +84,35 @@
 
         <div class="project">
             <div class="project-image">
-                <img src="../assets/content/code/UselessWindows.png" alt="Project Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
+                <img src="../assets/content/code/ThisWebsite.png" alt="This Website Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
+            </div>
+            <div class="project-content">
+                <div class="project-header">
+                    <h2 class="project-title">Portfolio Website</h2>
+                    <p class="project-description">
+                        A hand-made portfolio site showcasing my projects across engineering, coding, and art. Hand-coded in vanilla HTML, CSS, and JavaScript. No frameworks. Deliberately kept light.
+                    </p>
+                </div>
+                <div class="project-footer">
+                    <div class="languages">
+                        <span class="language-tag">HTML</span>
+                        <span class="language-tag">CSS</span>
+                        <span class="language-tag">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/mildracc/mildracc.github.io" class="github-link">View Repo</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-image">
+                <img src="../assets/content/code/UselessWindows.png" alt="Useless Windows Screenshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%231e1e1e%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 font-family=%22monospace%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3E// screenshot %3C/text%3E%3C/svg%3E'">
             </div>
             <div class="project-content">
                 <div class="project-header">
                     <h2 class="project-title">Useless Windows</h2>
                     <p class="project-description">
-                        A useless website where you can open up lots of useless windows. To open a random website, don't type in a URL.
+                        An interactive web toy that spawns draggable browser windows. Enter a URL to open it in a new fake window, or leave the URL blank to get a random website. Completely pointless, but fun.
                     </p>
                 </div>
                 <div class="project-footer">
