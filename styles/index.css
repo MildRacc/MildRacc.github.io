@@ -48,6 +48,10 @@
     text-decoration: none;
 }
 
+.links #fun {
+    opacity: 0.075;
+}
+
 
 .ital {
     font-style: italic;
@@ -91,12 +95,13 @@
 #gh p {
     position: relative;
     font-family: 'Limelight', sans-serif;
-    color: #d6d6e7;
+    color: #a0a0af;
     opacity: 0.0;
     margin: 0;
     padding: 0;
+    font-size: 1.5rem;
 
-    bottom: 0.5em;
+    bottom: 0.275em;
 
     transition: all 0.3s ease;
 }
