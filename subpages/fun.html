@@ -4,44 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun</title>
-
+    <link rel="stylesheet" href="../styles/fun.css">
 </head>
 
 <body>
-    <canvas id="draw" width="500px" height="250px" onmousemove="draw(event)"></canvas>
+    <div id="terminal">
+        <div class="noselect", id="stack">
+
+
+        </div>
+        <div id="input_line">
+            <p id="new_line_indicator">></p>
+            <p class="noselect", id="input"></p>
+            <p id="blinker">_</p>
+        </div>
+    </div>
 </body>
 </html>
 
 <footer>
-<script>
-        
-    console.log("test")
-
-    let oldX = 0
-    let oldY = 0
-
-    let c = document.getElementById("draw")
-    let ctx = c.getContext("2d")
-
-    function draw(event)
-    {        
-
-        ctx.fillStyle = "#00000011"
-        ctx.fillRect(0, 0, 500, 250)
-
-        let x = event.offsetX
-        let y = event.offsetY
-
-        ctx.beginPath(); // Begin a new path
-        ctx.moveTo(oldX, oldY); // Set starting point (x1, y1)
-        ctx.lineTo(x, y); // Set ending point (x2, y2)
-        ctx.strokeStyle = "red"; // Set line color
-        ctx.lineWidth = 5; // Set line width
-        ctx.stroke(); // Render the line
-
-        oldX = x
-        oldy = y
-
-    }
-</script>
+    <script type="module" src="../src/fun.js"></script>
 </footer>

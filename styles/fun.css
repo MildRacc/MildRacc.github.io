@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'ShareTechMono';
+    src: url('../fonts/ShareTechMono-Regular.ttf') format('truetype');
+}
+
+:root {
+    background-color: #051005;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+p {
+    font-family: 'ShareTechMono', monospace;
+    color: #11cc11;
+
+    margin: 0;
+    padding: 0;
+    
+    font-size: 2.3vh;
+    line-height: 1;
+}
+
+#input_line {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+}
+
+#new_line_indicator {
+    margin-right: 4px;
+}
+
+#blinker {
+    animation: spin 0.75s steps(2, jump-none) infinite;
+}
+
+@keyframes spin {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
