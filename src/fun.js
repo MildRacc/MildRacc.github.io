@@ -313,9 +313,9 @@ class Terminal
     {
         this.push_blank_line()
         this.push_str_line("To use a program, type the name of the desired program, e.g, \"help\", and press enter to run it.")
-        this.push_str_line("Programs that take arguments, such as `proj`, `redir`, or `cd` take arguments, and entering just the name of")
-        this.push_str_line("without any arguments will print a guide on what arguments the program takes, and how to enter them.")
-        this.push_str_line("the program. For example, to redirect to my art page, you would enter `redir art`")
+        this.push_str_line("Programs such as `proj`, `redir`, or `cd` take arguments, and entering just the name without any")
+        this.push_str_line("arguments will print a guide on what arguments the program takes, and how to enter them.")
+        this.push_str_line("For example, to redirect to my art page, you would enter `redir art`")
         this.push_blank_line()
         this.push_str_line("Available Programs:")
         this.push_str_line("    help      Lists all available programs")
