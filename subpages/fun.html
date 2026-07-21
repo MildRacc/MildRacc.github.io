@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun</title>
     <link rel="stylesheet" href="../styles/fun.css">
+        <script type="module">
+        import ShaderviewElement from '../src/shaderview.min.js';
+        customElements.define('kc-shaderview', ShaderviewElement);
+    </script>
 </head>
+
+<kc-shaderview id="shader" autoplay>
+    <script type="x-shader/x-fragment" src="../src/crt.glsl"></script>
+</kc-shaderview>
 
 <body>
     <div id="terminal">
