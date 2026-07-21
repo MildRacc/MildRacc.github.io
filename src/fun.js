@@ -719,6 +719,27 @@ const fs = new dir("root", [
 
 
     new dir("home", [
+
+        new dir("downloads", [
+
+            new dir("xenia_canary_brnspos", [
+                new dir("build", [
+                    new file("xenia_canary", ["�r4|�GNU�n PPQ�nQ�n�w�w�wD&UD&U���������x�@�1XI�XY�XY�@ppp ���DD����������S�tdppp P�td�������-�-Q�tdR�td���������p�p�/lib64/ld-brnspcos-x86-64.so.2GNU��GNU�.��hѶݾ0���9��[�HV�rԍ�6P��D���DM*p�%�������-�&�ҽ�{p�y�^p����4%�#6}�/��", "������a���(:'�3���8���TsʄMn%��TJ��Hv��+�L��ԧꬲ��g�,z�[", "@Anostuwyz|}~��������������������������������"]),
+                    new file("xenia.log", ["i> F80001F0 Removed handle:F800021C for N2xe6kernel6XEventE", "i> F80001F0 Removed handle:F8000218 for N2xe6kernel6XEventE", "i> F80001F0 Removed handle:F8000214 for N2xe6kernel6XEventE", "i> F80001F0 Removed handle:F8000210 for N2xe6kernel6XEventE"])
+                ]),
+                new file("LICENSE", ["Copyright (c) 2015, Ben Vanik.", "All rights reserved.", "Redistribution and use in source and binary forms, with or without", "modification, are permitted provided that the following conditions are met:", "blah blah blah, you get the gist."])
+            ]),
+
+            new dir("Diablo_III_Ultimate", [
+                new file("Diablo_III_Ultimate.iso", ["ik��<k�����H�WH�� �(�hm�W���H��H�H�H�", "D��I��@���t�������������^����s����������|^����s������������^����s���������H��(��b^��h�foZ(���s�H�", "�����������^��q�������������^����p�������������^����p�������������^����p���������H�", "�$`H��P_�O�E3�H�|$E3�3�3�踕L$0H��H��H��rH�I�H��'H+�H�H�����'��H���H�$`�0H�on���Q�H��H��tQH�xE3�H�xE3�H�x�3"])
+            ]),
+
+            new file("Diablo_III_Ultimate.zip", ["PK��!_F��������>Diablo III - Reaper of Souls - Ultimate Evil Edition (USA).iso8HK���	<U��?��C�I�P��y&2g�)��y%C��_��d夤�L�H6:zk���6���'���Z�������F���r�w��S�G������Ұ��tC���5�?��#���ch���;�h��	�Gh�Y|96�V)���4��{��k������I���'����7��`N�1�߼ߟ��{.&ϛu~?�	�����59��g��+�DJ�����<H�, ��K�����/����	�y����z��˲¿}��/����������������������0'��`�3����ok�D6�a��"]),
+        ]),
+
+        new file(".bashrc", [
+            "[[ $- != *i* ]] && return"
+        ]),
         new file("about_me.txt", [
             "Hello!",
             " ",
@@ -733,6 +754,8 @@ const fs = new dir("root", [
     new dir("programs", [
 
         new dir("system", [
+
+            new file("bash.bsp", ["env $~/.bashrc sudo run \"$args\""]),
 
             new file("help.bsp", [
                 "help() {",
