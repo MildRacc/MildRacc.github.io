@@ -4,7 +4,7 @@
 // I am typically rigorous when it comes to code organization in my other projects
 
 async function main() {
-    const dev = true;
+    const dev = false;
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     let terminal = new Terminal();
 
