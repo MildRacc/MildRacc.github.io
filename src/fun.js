@@ -3,8 +3,10 @@
 // I deliberately did not make any effort to organize my code into multiple files or optimize my code, for the sake of getting something functional out into the world.
 // I am typically rigorous when it comes to code organization in my other projects
 
+import * as FCONTENTS from "./file_cont.js"
+
 async function main() {
-    const dev = false;
+    const dev = true;
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     let terminal = new Terminal();
 
@@ -318,6 +320,9 @@ class Terminal {
             case "cat":
                 this.cat(args)
                 break
+            case "unzip":
+                this.unzip(args)
+                break
 
 
             default:
@@ -357,6 +362,7 @@ class Terminal {
         this.push_str_line("    ls        List current directory contents")
         this.push_str_line("    rm        Delete file/directory")
         this.push_str_line("    cat       Print file contents to terminal")
+        this.push_str_line("    unzip     Extract contents of an archive to a folder")
     }
 
 
@@ -688,6 +694,60 @@ class Terminal {
 
     }
 
+    unzip(args)
+    {   
+        let usage = () => {
+            this.push_str_line("Program usage: `unzip [archive]`")
+            this.push_blank_line()
+        }
+
+        if (args.length == 0) {
+            this, this.push_blank_line()
+            usage()
+            return
+        }
+
+        if (args.length > 1) {
+            this.push_blank_line()
+            this.push_str_line("Error: Too many arguments specified.")
+            usage()
+            return
+        }
+        
+        let file = "" + args[0]
+        console.log(file.substring(file.length - 4, file.length))
+
+        if(file.substring(file.length - 4, file.length) != ".zip")
+        {
+            this.push_blank_line()
+            this.push_str_line("Error: File \"" + file + "\" is not an archive")
+            usage()
+            return
+        }
+
+        let working_dir = this.pwd[this.pwd.length - 1];
+
+        for (let i = 0; i < working_dir.contents.length; i++) {
+            let grabbed_entry = working_dir.contents[i]
+            if (!grabbed_entry.is_dir && grabbed_entry.name == file) {
+                
+                let unzipped_dir = new dir(file.substring(0, file.length - 4), [])
+                for ( let entryidx = 0; entryidx < grabbed_entry.unzip.length; entryidx++)
+                {
+                    console.log(entryidx)
+                    unzipped_dir.contents.push(grabbed_entry.unzip[entryidx])
+                }
+                working_dir.contents.push(unzipped_dir)
+                
+                return
+            }
+        }
+
+        this.push_blank_line()
+        this.push_str_line("Error: Archive \"" + file + "\" doen't exist")
+        usage()
+
+    }
 }
 
 
@@ -707,124 +767,57 @@ class file {
     is_dir = false
     name = ""
     contents = ""
+    unzip = []
 
-    constructor(name, contents) {
+    constructor(name, contents, unzip=undefined) {
         this.name = name
         this.contents = contents
+        this.unzip = unzip
     }
 }
 
 
 const fs = new dir("root", [
 
-
     new dir("home", [
-
         new dir("downloads", [
-
             new dir("xenia_canary_brnspos", [
                 new dir("build", [
-                    new file("xenia_canary", ["�r4|�GNU�n PPQ�nQ�n�w�w�wD&UD&U���������x�@�1XI�XY�XY�@ppp ���DD����������S�tdppp P�td�������-�-Q�tdR�td���������p�p�/lib64/ld-brnspcos-x86-64.so.2GNU��GNU�.��hѶݾ0���9��[�HV�rԍ�6P��D���DM*p�%�������-�&�ҽ�{p�y�^p����4%�#6}�/��", "������a���(:'�3���8���TsʄMn%��TJ��Hv��+�L��ԧꬲ��g�,z�[", "@Anostuwyz|}~��������������������������������"]),
-                    new file("xenia.log", ["i> F80001F0 Removed handle:F800021C for N2xe6kernel6XEventE", "i> F80001F0 Removed handle:F8000218 for N2xe6kernel6XEventE", "i> F80001F0 Removed handle:F8000214 for N2xe6kernel6XEventE", "i> F80001F0 Removed handle:F8000210 for N2xe6kernel6XEventE"])
+                    new file("xenia_canary", FCONTENTS.xenia_canary),
+                    new file("xenia.log", FCONTENTS.xenia_log)
                 ]),
-                new file("LICENSE", ["Copyright (c) 2015, Ben Vanik.", "All rights reserved.", "Redistribution and use in source and binary forms, with or without", "modification, are permitted provided that the following conditions are met:", "blah blah blah, you get the gist."])
+                new file("LICENSE", FCONTENTS.xenia_LICENSE)
             ]),
 
-            new dir("Diablo_III_Ultimate", [
-                new file("Diablo_III_Ultimate.iso", ["ik��<k�����H�WH�� �(�hm�W���H��H�H�H�", "D��I��@���t�������������^����s����������|^����s������������^����s���������H��(��b^��h�foZ(���s�H�", "�����������^��q�������������^����p�������������^����p�������������^����p���������H�", "�$`H��P_�O�E3�H�|$E3�3�3�踕L$0H��H��H��rH�I�H��'H+�H�H�����'��H���H�$`�0H�on���Q�H��H��tQH�xE3�H�xE3�H�x�3"])
+            new file("Diablo_III_Ultimate.zip", FCONTENTS.Diablo_III_Ultimate_zip, [
+                new file("Diablo_III_Ultimate.iso", FCONTENTS.Diablo_III_Ultimate_iso),
+                new file("readme.txt", FCONTENTS.diablo_readme_txt)
             ]),
-
-            new file("Diablo_III_Ultimate.zip", ["PK��!_F��������>Diablo III - Reaper of Souls - Ultimate Evil Edition (USA).iso8HK���	<U��?��C�I�P��y&2g�)��y%C��_��d夤�L�H6:zk���6���'���Z�������F���r�w��S�G������Ұ��tC���5�?��#���ch���;�h��	�Gh�Y|96�V)���4��{��k������I���'����7��`N�1�߼ߟ��{.&ϛu~?�	�����59��g��+�DJ�����<H�, ��K�����/����	�y����z��˲¿}��/����������������������0'��`�3����ok�D6�a��"]),
         ]),
 
-        new file(".bashrc", [
-            "[[ $- != *i* ]] && return"
-        ]),
-        new file("about_me.txt", [
-            "Hello!",
-            " ",
-            "If you're reading this, you must certainly be an expert. This text is only present in expert mode!",
-            "I don't really feel like adding the actual contents of this file right now. I'll probably do that later (probably)"
-        ]),
-        new file("passwords.txt", ["this: !temp_pass223 (change later)", "gmail: !temp_pass223 (also change later)", "bank: #temP_Pass224 (can wait a bit)", "tindr: Password1!"]),
-        new file("binary.txt", ["000", "001", "010", "011", "100", "101", "110", "111", "000"]),
-        new file("empty.txt", ["i lied"])
+        new file(".bashrc", FCONTENTS.dot_bashrc),
+        new file("about_me.txt", FCONTENTS.about_me_txt),
+        new file("passwords.txt", FCONTENTS.password_txt),
+        new file("binary.txt", FCONTENTS.binary_txt),
+        new file("empty.txt", FCONTENTS.empty_txt)
     ]),
 
     new dir("programs", [
 
         new dir("system", [
-
-            new file("bash.bsp", ["env $~/.bashrc sudo run \"$args\""]),
-
-            new file("help.bsp", [
-                "help() {",
-                "  this.push_blank_line()",
-                "  this.push_str_line(\"To use a program, type the name of the desired program, e.g, \"help\", and press enter to run it.\")",
-                "  this.push_str_line(\"Programs that take arguments, such as `proj`, `redir`, or `cd` take arguments, and entering just the name of\")",
-                "  this.push_str_line(\"without any arguments will print a guide on what arguments the program takes, and how to enter them.\")",
-                "  this.push_str_line(\"the program. For example, to redirect to my art page, you would enter `redir art`\")",
-                "  this.push_blank_line()",
-                "  this.push_str_line(\"Available Programs:\")",
-                "  this.push_str_line(\"    help      Lists all available programs\")",
-                "  this.push_str_line(\"    exit      Go back home\")",
-                "  this.push_str_line(\"    clear     Clear all text from therminal\")",
-                "  this.push_str_line(\"    proj      View details about my projects\")",
-                "  this.push_str_line(\"    redir     Redirect to a different webpage\")",
-                "  this.push_str_line(\"    cd        Change directory\")",
-                "  this.push_str_line(\"    ls        List current directory contents\")",
-                "  this.push_str_line(\"    rm        Delete file/directory\")",
-                "  this.push_str_line(\"    cat       Print file contents to terminal\")",
-                "}",
-            ]),
-
-
-            new file("exit.bsp", [
-                "exit() {",
-                "  window.location.replace(\"../index.html\");",
-                "}"
-            ]),
-
-
-            new file("clear.bsp", [
-                "clear() {",
-                "  for(let i = 0; i < this.line_list.length; i++)",
-                "  {",
-                "    this.line_list[i].remove()",
-                "  }",
-                "  this.line_list = []",
-                "}",
-            ]),
-
-            new file("ls.bsp", [
-                "ls() {",
-                "  let working_dir = this.pwd[this.pwd.length - 1]",
-                "  let message = \"./ ../ \"",
-                "  for (let i = 0; i < working_dir.contents.length; i++) {",
-                "    let content = working_dir.contents[i]",
-                "    if (content.is_dir) {",
-                "      message += content.name + \"/ \"",
-                "    } else {",
-                "      message += content.name + \" \"",
-                "    }",
-                "  }",
-                "  this.push_str_line(message)",
-                "}",
-            ]),
-
-        ]), // System dir
+            new file("bash.bsp", FCONTENTS.bsah_bsp),
+            new file("help.bsp", FCONTENTS.help_bsp),
+            new file("exit.bsp", FCONTENTS.exit_bsp),
+            new file("clear.bsp", FCONTENTS.clear_bsp),
+            new file("ls.bsp", FCONTENTS.ls_bsp),
+        ]),
 
         new dir("rust", [
-            new file("cargo.bsp", ["L[vIô£>eÚ+ŒD¬Úµ[{ ÒÞAzQ‹‘Ý{ji¢[ÿº[§=ö", "…Þû˜#Ù‘y¾L1sºì`@×ÛÝÝ:pÝï1p¸P@-/›¹¶ô¯·Ö<", "‰Js0 ¦(ÆA6ü†Šú­ÛeTûÉÚ´¸ùåb÷s~}é‚g >È}z", "|Oî@¥\\3HØƒhVw¿", "ÐLÌV5z‰Ï¦œEL3š~#S1º6", "Ñ½ŠØA_›¡}\ˆó®©SoßJÅo :5Ç1GLQ3¿Â_È", " ¼ò®ƒ6mïKRXÿWcz\ª(ò9¦º ƒTV–‚*ôé7<ô{¯joÄ…–paªöH	±ÓW ‘@ö"]),
-            new file("rustup.bsp", ["‡ H‰…X_  ¸   ‰…P_  é­  L‰µX_  Ç…P_     Hƒ½à_   L‹½ø_  H‹½Ø_  „¡þÿÿÿ¼L‰ H‰Á1ÒI‰øÿ¦L‰ éˆþÿÿM‰üHƒùL‹­ð_  L‹½è_  …ý  ¹rust3·Pòup  	Ê„Â", "  H‰…`]  HÇ…h]     H<õ H‰…°  H…°  H‰…Ð=  H. H‰…Ø=  L‰­¨_  L‰½ _  H‹…Ø_  H‰…˜_  H‹…à_  H‰…_  L=]4 Hp]  L…Ð=  L‰úèšÙ 1ÀH;…p]    HÇ…°      HÇ…¸     HÇ…À      H…`]  H‰…Ð=  H¥’ H‰…Ø=  H…°  H‰…à=  H)ç H‰…è=  H¥3 Hø\  L…Ð=  èÙ Hƒ½°   tH‹½¸  ÿYK‰ H‰Á1ÒI‰øÿCK‰ L‹­ð_  L‰­¨_  H‹…è_  H‰… _  H‹½Ø_  H‰½˜_  H‹…à_  H‰…_  Hø\  èß]ˆ H‰…X_  Ç…P_     Hƒ½à_   tÿæJ‰ H‰Á1ÒI‰øÿÐJ‰ L‹½ø_  AÆGH I‹G HÑàH…À„æ  I‹(ÿ²J‰ H‰Á1ÒI‰øÿœJ‰ I‹@Hƒÿÿ…Ê  éà  Hƒù"]),
-            new file("rustc.bsp", ["	Á„,  3A¸tfmtD3@ëGHºcargo-miH3D·@Iðri  é÷   ºrust3D¶@AƒðcA	Ð„ç   ºcarg3D¶@AƒðoA	Ð…-åÿÿéÉ   Hºrust-gdbH3I¸t-gdbguiL3@é    Hºcargo-clH3D‹@Iðippyéƒ   Hºrust-gdbH9…ØäÿÿëwHºrust-lldH3D¶@IƒðbI	Ðt\Hºcargo-fmH3D¶@Iƒðtë;Hºclippy-dH3I¸y-driverL3@I	Ðt$Hºrust-anaH3I¸analyzerL3@I	Ð…_äÿÿAÆD$H I‹\$8IT$PH‰•Ð_  H‹•à_  I‰T$PH‹•Ø_  I‰T$X(…P]  AD$`I‰D$pI‰L$xI‰œ$€   M´$à   AÆ„$à    é4Ùÿÿ1ÉL‰òèŒ®g H…À„ð   H‹H_  H‰L‰h(E°@L‰½Ð=  H‰…Ø=  HÇ…à=     A¾   A½0   L½Ð=  ë@H‹…Ø=  L‹¥è]  L‹]  L‹•H_  N‰T(ðN‰L(ø(…°  B(IÿÆL‰µà=  IƒÅ I‹T$M‹D$L9ÂtcHJ I‰L$L‹L‹JB)…°  L‰ÒH÷Úp@L;µÐ=  u¡L‰•H_  L‰]  I)ÈIÁèIÿÀHÇD$     A¹   L‰ùL‰òèRÙ† éNÿÿÿL‰"])
+            new file("cargo.bsp", FCONTENTS.cargo_bsp),
+            new file("rustup.bsp", FCONTENTS.rustup_bsp),
+            new file("rustc.bsp", FCONTENTS.rustup_bsp)
         ])
-
     ]),
-
-
 ])
-
-
 
 main()
