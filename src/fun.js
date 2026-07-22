@@ -781,7 +781,7 @@ const fs = new dir("root", [
 
     new dir("home", [
         new dir("downloads", [
-            new dir("xenia_canary_brnspos", [
+            new dir("xenia_canary_brnspcos", [
                 new dir("build", [
                     new file("xenia_canary", FCONTENTS.xenia_canary),
                     new file("xenia.log", FCONTENTS.xenia_log)
@@ -816,6 +816,10 @@ const fs = new dir("root", [
             new file("cargo.bsp", FCONTENTS.cargo_bsp),
             new file("rustup.bsp", FCONTENTS.rustup_bsp),
             new file("rustc.bsp", FCONTENTS.rustup_bsp)
+        ]),
+
+        new dir("user", [
+            new file("super_torrent.bsp", ["[insert binary here (in russian)]"])
         ])
     ]),
 ])
