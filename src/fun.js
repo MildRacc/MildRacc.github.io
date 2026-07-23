@@ -4,9 +4,10 @@
 // I am typically rigorous when it comes to code organization in my other projects
 
 import * as FCONTENTS from "./file_cont.js"
+import * as FFUNCS from "./file_funcs.js"
 
 async function main() {
-    const dev = false;
+    const dev = true;
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     let terminal = new Terminal();
 
@@ -125,6 +126,7 @@ async function main() {
 
 }
 
+
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + 1
 }
@@ -147,6 +149,7 @@ class Terminal {
         this.canvas_context = context
 
     }
+
 
     on_new_keystroke(e) {
         if (e.ctrlKey || e.metaKey || e.altKey) {
@@ -191,14 +194,13 @@ class Terminal {
         this.input.textContent += input_text;
     }
 
+
     push_line() {
         if (this.input.textContent == "") {
             this.push_str_line(" ")
         }
         this.push_str_line("$" + this.input.textContent)
         this.input.textContent = ""
-
-
     }
 
 
@@ -261,6 +263,7 @@ class Terminal {
         }
     }
 
+
     push_blank_line() {
         if (this.line_list.length > 40) {
             this.line_list = this.line_list.reverse();
@@ -274,9 +277,6 @@ class Terminal {
         this.stack.appendChild(new_line)
         this.line_list.push(new_line)
     }
-
-
-
 
 
     run_command(str) {
@@ -363,8 +363,8 @@ class Terminal {
         this.push_str_line("    rm        Delete file/directory")
         this.push_str_line("    cat       Print file contents to terminal")
         this.push_str_line("    unzip     Extract contents of an archive to a folder")
+        this.push_str_line("    lol       Execute a .lol program")
     }
-
 
 
     exit() {
@@ -379,7 +379,6 @@ class Terminal {
         }
         this.line_list = []
     }
-
 
 
     proj(args) {
@@ -623,6 +622,7 @@ class Terminal {
 
     }
 
+
     rm(args) {
         let usage = () => {
             this.push_str_line("Program usage: `rm [entry]`")
@@ -657,6 +657,7 @@ class Terminal {
         usage()
 
     }
+
 
     cat(args) {
         let usage = () => {
@@ -694,8 +695,8 @@ class Terminal {
 
     }
 
-    unzip(args)
-    {   
+
+    unzip(args) {
         let usage = () => {
             this.push_str_line("Program usage: `unzip [archive]`")
             this.push_blank_line()
@@ -713,12 +714,11 @@ class Terminal {
             usage()
             return
         }
-        
+
         let file = "" + args[0]
         console.log(file.substring(file.length - 4, file.length))
 
-        if(file.substring(file.length - 4, file.length) != ".zip")
-        {
+        if (file.substring(file.length - 4, file.length) != ".zip") {
             this.push_blank_line()
             this.push_str_line("Error: File \"" + file + "\" is not an archive")
             usage()
@@ -730,15 +730,14 @@ class Terminal {
         for (let i = 0; i < working_dir.contents.length; i++) {
             let grabbed_entry = working_dir.contents[i]
             if (!grabbed_entry.is_dir && grabbed_entry.name == file) {
-                
+
                 let unzipped_dir = new dir(file.substring(0, file.length - 4), [])
-                for ( let entryidx = 0; entryidx < grabbed_entry.unzip.length; entryidx++)
-                {
+                for (let entryidx = 0; entryidx < grabbed_entry.unzip.length; entryidx++) {
                     console.log(entryidx)
                     unzipped_dir.contents.push(grabbed_entry.unzip[entryidx])
                 }
                 working_dir.contents.push(unzipped_dir)
-                
+
                 return
             }
         }
@@ -749,7 +748,6 @@ class Terminal {
 
     }
 }
-
 
 
 class dir {
@@ -763,16 +761,19 @@ class dir {
     }
 }
 
+
 class file {
     is_dir = false
     name = ""
     contents = ""
     unzip = []
+    execute = (args) => { }
 
-    constructor(name, contents, unzip=undefined) {
+    constructor(name, contents, unzip = undefined, on_execute = () => { }) {
         this.name = name
         this.contents = contents
         this.unzip = unzip
+        this.on_execute = on_execute
     }
 }
 
@@ -793,6 +794,10 @@ const fs = new dir("root", [
                 new file("Diablo_III_Ultimate.iso", FCONTENTS.Diablo_III_Ultimate_iso),
                 new file("readme.txt", FCONTENTS.diablo_readme_txt)
             ]),
+        ]),
+
+        new dir("lols", [
+            new file("random_website.lol", FCONTENTS.rand_site_lol, FFUNCS.random_website)
         ]),
 
         new file(".bashrc", FCONTENTS.dot_bashrc),
@@ -823,5 +828,6 @@ const fs = new dir("root", [
         ])
     ]),
 ])
+
 
 main()

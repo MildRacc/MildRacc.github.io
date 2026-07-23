@@ -1,0 +1,47 @@
+
+
+export function random_website()
+{
+    const random_sites =
+    [
+        "https://virtual.bbcmic.ro/?disc1=elite.ssd&autoboot",
+        "https://codepen.io/p0waqqatsi/full/MWdYLaW",
+        "https://www.youtube.com/embed/nt6ab7BTlgE",
+        "https://open.spotify.com/embed/track/0Vfgpl5VpDBQexEPYUqaQK?utm_source=generator",
+        "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+        "https://gorescript.github.io/classic/play/",
+        "https://www.mapstd.com/",
+        "http://webglsamples.org/imagesphere/imagesphere.html",
+        "https://puginarug.com/",
+        "https://binarypiano.com/",
+        "https://checkbox.toys/scale/",
+        "https://mondrianandme.com/",
+        "https://cursoreffects.com/",
+        "https://floatingqrcode.com/",
+        "https://longdogechallenge.com/",
+        "https://hooooooooo.com/",
+        "https://onesquareminesweeper.com/",
+        "https://thatsthefinger.com/",
+        "https://clicking.toys/flip-grid/neat-nine/3-holes/",
+        "https://burymewithmymoney.com/",
+        "https://cant-not-tweet-this.com/",
+        "https://theuselessweb.com/",
+        "https://hackertyper.com/",
+        "https://www.beesbeesbeesbees.com/",
+        "https://pointerpointer.com/",
+        "https://screamintothevoid.com/",
+        "https://zoomquilt.org/",
+        "https://codepen.io/camsong/embed/poveQM?default-tab=result&theme-id=default",
+        "https://www.internetlivestats.com/",
+        "https://thisissand.com/",
+        "http://radio.garden/visit/jaipur/QSlnmGmG",
+        "https://trypap.com/",
+        "https://29a.ch/sandbox/2011/neonflames/",
+        "https://www.omfgdogs.com/",
+    ]
+
+    let rand = Math.floor(Math.random() * (random_sites.length - 1))
+
+    window.location.href = random_sites[rand]
+
+}
