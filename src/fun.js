@@ -7,7 +7,7 @@ import * as FCONTENTS from "./file_cont.js"
 import * as FFUNCS from "./file_funcs.js"
 
 async function main() {
-    const dev = true;
+    const dev = false;
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     let terminal = new Terminal();
 
