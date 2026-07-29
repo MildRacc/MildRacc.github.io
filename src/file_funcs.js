@@ -45,3 +45,8 @@ export function random_website()
     window.location.href = random_sites[rand]
 
 }
+
+export function floppy()
+{
+    window.location.href = "./floppy.html"
+}

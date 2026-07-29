@@ -793,11 +793,15 @@ const fs = new dir("root", [
             new file("Diablo_III_Ultimate.zip", FCONTENTS.Diablo_III_Ultimate_zip, [
                 new file("Diablo_III_Ultimate.iso", FCONTENTS.Diablo_III_Ultimate_iso),
                 new file("readme.txt", FCONTENTS.diablo_readme_txt)
-            ]),
+            ]),        
         ]),
 
         new dir("lols", [
-            new file("random_website.lol", FCONTENTS.rand_site_lol, FFUNCS.random_website)
+            new file("random_website.lol", FCONTENTS.rand_site_lol, unzip = undefined, FFUNCS.random_website)
+        ]),
+
+        new dir("secret", [
+            new file("floppy.lol", FCONTENTS.floppy_lol, unzip = undefined, FFUNCS.floppy)
         ]),
 
         new file(".bashrc", FCONTENTS.dot_bashrc),

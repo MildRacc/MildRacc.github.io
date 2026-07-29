@@ -76,3 +76,4 @@ export const rustc = ["	Á„,  3A¸tfmtD3@ëGHºcargo-miH3D·@Iðri  �
 
 
 export const rand_site_lol = ["oLOllLllLlloLLOOoLLOoLloOlLOloOLlOolOLooLOloLOlolOLLolOLOlo", "LOoLOlolOLlolOLOlOLolLolOLLOloLOLOlololololoLLOLoloLolLLolOLOloLOll", "OloLLolOLo", "loOloOOllOLOlOLlLOLOLolOLLOloLOllLolOLololOLolOLolOLloLOlOLolOLolOLlOLoloLOloLOlolLolOLolOLolloLLolL"]
+export const floppy_lol = ["lOlLOlLoloLOlLoLoLololOLloLolLOloOllOoLOlOLlOlOllolol"]
