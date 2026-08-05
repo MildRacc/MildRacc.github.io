@@ -797,11 +797,11 @@ const fs = new dir("root", [
         ]),
 
         new dir("lols", [
-            new file("random_website.lol", FCONTENTS.rand_site_lol, unzip = undefined, FFUNCS.random_website)
+            new file("random_website.lol", FCONTENTS.rand_site_lol, undefined, FFUNCS.random_website)
         ]),
 
         new dir("secret", [
-            new file("floppy.lol", FCONTENTS.floppy_lol, unzip = undefined, FFUNCS.floppy)
+            new file("floppy.lol", FCONTENTS.floppy_lol, undefined, FFUNCS.floppy)
         ]),
 
         new file(".bashrc", FCONTENTS.dot_bashrc),
