@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reuse.css">
+    <link rel="stylesheet" href="../styles/art.css">
+    <title>Art - brnspc</title>
+</head>
+<body>
+    <a href="../index.html" class="back-button">← Back</a>
+
+    <div class="page-header">
+        <h1>art</h1>
+        <p>Welcome to the gallery</p>
+    </div>
+
+    <div class="projects-container">
+
+
+        <div class="exhibit">
+            <h2>I Have No Mouth & Will Be Happy</h2>
+            <ul class="carousel">
+                <li class="art-piece" data-video="true">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784082899/Experimental-Vid_hyvqje.png" alt="Experimental" id="experimental">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538917/swoosh_hhsgr7.png" alt="swoosh">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787539991/BlindingLights_z3drch.jpg" alt="Blinding Lights">
+                </li>
+            </ul>
+        </div>
+   
+
+        <div class="exhibit">
+            <h2>A - From My Cold, Dead Hands</h2>
+            <ul class="carousel">
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1785211888/GloscBoxPoster_hmmdns.png" alt="GloscBox Poster">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538915/GloscBoxSteamy_khmwn4.png" alt="GloscBox Steamy Poster">
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="exhibit">
+            <h2>B - Modern Gold</h2>
+            <ul class="carousel">
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538886/Jazzpunk_o51evn.png" alt="Jazzpunk DVD">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538886/ScheduleI_mbdvtb.png" alt="Schedule I">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538885/Noita_baiymp.png" alt="Noita">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538885/Dusk_itnidf.png" alt="Dusk">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538884/Crawl_qalcam.png" alt="Crawl">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538884/Skate3_hzjg7e.png" alt="Skate 3">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538884/Terraria_her92q.png" alt="Terraria">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538884/Minecraft_rsawzw.png" alt="Minecraft">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538885/Ultrakill_vvnsgy.png" alt="Ultrakill">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538886/HyperDemon_iocihy.png" alt="Hyper Demon">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538886/Ravenfield_bhkqd0.png" alt="Ravenfield">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538885/DwarfFortress_er7jjp.png" alt="Dwarf Fortress">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538885/StardewValley_wp0e77.png" alt="Stardew Valley">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538884/EnterTheGungeon_li5kpc.png" alt="Enter The Gungeon">
+                </li>
+            </ul>
+        </div>
+
+        <!--
+        <div class="exhibit">
+            <h2>I Can Play God</h2>
+            <ul class="carousel">
+                <li class="art-piece" data-video="true">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784082899/Experimental-Vid_hyvqje.png" alt="Experimental" id="experimental">
+                </li>
+            </ul>
+        </div>
+        -->
+
+        <div class="exhibit">
+            <h2>So Long, Guys</h2>
+            <ul class="carousel">
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787539936/SoLongGuys_ix3jrz.jpg" alt="So Long Guys">
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="exhibit">
+
+            <h2>The Joy of CG</h2>
+            <ul class="carousel">
+                <li class="art-piece" data-video="true">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784082899/SpaceCowboy-Vid_mplfbr.png" alt="Space Cowboy" id="space_cowboy">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538915/SnickersSeriesTitle_V3_n9sotf.png" alt="Left or Right">
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="exhibit">
+            <h2>Pen</h2>
+            <ul class="carousel">
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538916/Big_Stupid_Ape_ruzin4.png" alt="Big Stupid Ape">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538915/YomanSkateboar_up6wkv.png" alt="Yoman">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1787538917/Paper_nqujpb.png" alt="Paper">
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="exhibit">
+            <h2>High School</h2>
+            <ul class="carousel">
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784082901/Low_Poly_project_zm98uf.png" alt="Low Poly Goose">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784083249/StoryTellingCollage_r7lnei.webp" alt="Storytelling">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784082901/ConveyEmotionFinal_ghnzxa.png" alt="Convey Emotion">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784083248/engineerArt_qlmleq.webp" alt="Engineer">
+                </li>
+                <li class="art-piece">
+                    <img src="https://res.cloudinary.com/b34didzp/image/upload/v1784085195/PushingLimitsFinal_gpypuo.webp" alt="Pushing The Limits">
+                </li>
+            </ul>
+        </div>
+
+
+
+
+    </div>
+    
+
+
+    <!-- Modal for full-size view -->
+    <div class="modal" id="imageModal">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modalImage" style="display:none;">
+            <iframe class="modal-iframe" id="modalIframe" style="display:none;" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalIframe = document.getElementById('modalIframe');
+        const closeModal = document.getElementById('closeModal');
+        const artPieces = document.querySelectorAll('.art-piece');
+
+        // Map thumbnails to YouTube video IDs
+        const youtubeMap = {
+            'experimental': '2sgk2SVO2kA',
+            'space_cowboy': 'tqNYm1sU_jw'
+        };
+
+        artPieces.forEach(piece => {
+            piece.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                const imgSrc = img.id;
+                const fileName = imgSrc.split('/').pop();
+                
+                modal.classList.add('active');
+                
+                // Check if this is a video thumbnail
+                if (youtubeMap[fileName]) {
+                    modalImg.style.display = 'none';
+                    modalIframe.style.display = 'block';
+                    modalIframe.src = `https://www.youtube.com/embed/${youtubeMap[fileName]}?autoplay=1`;
+                } else {
+                    modalIframe.style.display = 'none';
+                    modalImg.style.display = 'block';
+                    modalImg.src = img.src;
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('active');
+            modalIframe.src = ''; // Stop video playback
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                modalIframe.src = ''; // Stop video playback
+            }
+        });
+    </script>
+</body>
